@@ -1,14 +1,8 @@
 /** @format */
 
 import Link from 'next/link';
+import { UserButton } from '@clerk/nextjs';
 import { auth } from '@clerk/nextjs/server';
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from '@clerk/nextjs';
 const Navbar = async () => {
   // const { isLoaded, userId, sessionId, getToken } = useAuth();
   const { userId } = await auth();
